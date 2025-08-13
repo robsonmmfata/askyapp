@@ -34,6 +34,21 @@ interface AskyApi {
         @Query(value = "code", encoded = true) code: String,
     ): Response<LoginResponse>
 
+    @POST("/api/app/v1/auth/qr-code/generate")
+    suspend fun generateQRCode(
+        @Body request: QRCodeLoginRequest
+    ): Response<QRCodeResponse>
+
+    @POST("/api/app/v1/auth/qr-code/verify")
+    suspend fun verifyQRCode(
+        @Query("code") code: String
+    ): Response<QRCodeLoginResponse>
+
+    @POST("/api/app/v1/auth/qr-code/poll")
+    suspend fun pollQRCodeStatus(
+        @Query("code") code: String
+    ): Response<QRCodeLoginResponse>
+
     @GET("/api/app/v1/admin/order/menus")
     suspend fun getAllMenu(
 //        @Header("Authorization") token: String

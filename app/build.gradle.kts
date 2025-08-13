@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "br.com.smartpos.asky"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "br.com.smartpos.asky"
@@ -47,6 +47,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    buildToolsVersion = "35.0.0"
 }
 
 dependencies {
@@ -80,6 +81,11 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
     implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("com.google.zxing:core:3.5.2")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation("androidx.camera:camera-camera2:1.3.0")
+    implementation("androidx.camera:camera-lifecycle:1.3.0")
+    implementation("androidx.camera:camera-view:1.3.0")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.1.1")
     implementation("io.coil-kt:coil-compose:2.5.0")
 
