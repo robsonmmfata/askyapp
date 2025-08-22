@@ -12,20 +12,41 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import br.com.smartpos.asky.viewModel.MenuViewModel
 
 @Composable
-fun LoginScreen(navController: NavHostController) {
+fun LoginScreen(
+    navController: NavHostController,
+    viewModel: MenuViewModel,
+    modifier: Modifier = Modifier,
+    onEnterLogin: () -> Unit
+) {
     val context = LocalContext.current
-    // Implementação do UI e lógica do login via QR Code
+    
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Login via QR Code", style = MaterialTheme.typography.headlineMedium)
-        Spacer(modifier = Modifier.height(20.dp))
-        // Botões, campos e lógica para login
+        Text(text = "Login Asky", style = MaterialTheme.typography.headlineMedium)
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        Button(
+            onClick = { navController.navigate("qr_scanner") },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Login via QR Code Stone")
+        }
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        Button(
+            onClick = onEnterLogin,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Entrar sem QR Code")
+        }
     }
 }

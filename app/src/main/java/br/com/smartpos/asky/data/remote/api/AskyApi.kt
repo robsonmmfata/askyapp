@@ -4,6 +4,9 @@ import br.com.smartpos.asky.data.model.LoginResponse
 import br.com.smartpos.asky.data.model.Menu.MenuResponse
 import br.com.smartpos.asky.data.model.MenuAll.MenuAllResponse
 import br.com.smartpos.asky.data.model.PasswordRequest
+import br.com.smartpos.asky.data.model.QRCodeLoginRequest
+import br.com.smartpos.asky.data.model.QRCodeResponse
+import br.com.smartpos.asky.data.model.QRCodeLoginResponse
 import br.com.smartpos.asky.data.model.PaymentRequest
 import br.com.smartpos.asky.data.model.PaymentResponse
 import br.com.smartpos.asky.data.model.cliente.ClienteResponse

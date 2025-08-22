@@ -1,4 +1,4 @@
-package br.com.smartpos.payxyz.ui.screens
+package br.com.smartpos.asky.ui.screens
 
 import android.app.Activity
 import androidx.activity.compose.BackHandler
